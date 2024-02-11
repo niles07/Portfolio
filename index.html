@@ -1,0 +1,764 @@
+﻿<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns#"> <!--lang - преимущественный язык, в prefix - указываем что используется OpenGraf разметка -->
+  <head>
+
+    <title>Niles.Lab</title> <!--То что отображается на вкладке-->
+    <meta charset="utf-8"/> <!--Кодировка текста на странице-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!--Вьюпорт для отладки отображения-->
+    <link rel="stylesheet" href="CSS/style.css"/>
+
+    <!-- The Open Graph START (необходимо для стилизации ссылки на сайт например в мессенджерах) -->
+    <meta property="og:title" content="Сюда надо вставить текст отображаемый при ссылании на данную страницу" />
+    <meta property="og:image" content="img_svg/lable.png"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:description" content="Описание страницы в ссылке"/>
+    <meta property="og:site_name" content="Niles.Lab"/>
+    <meta property="og:image:width" content="630"/>
+    <meta property="og:image:height" content="630"/>
+    <!-- The Open Graph END -->
+
+    <!-- Fancybox (для просмотра картинок в большем размере как плеер) -->
+    <script src="JS/jQuery.js"></script>
+    <link rel="stylesheet" href="CSS/jqueryfancybox.css"/>
+    <script src="JS/fancybox.js"></script>
+    <!-- Fancybox -->
+
+    <link rel="stylesheet" href="CSS/styleForButtonToTop.css"/>
+
+    <!--Hammer.js для настройки жестов с несколькими касаниями
+    <script src="http://eightmedia.github.com/hammer.js/hammer.js"></script>-->
+
+    <!-- Start scroll Romans Yu.-->
+    <!--https://romanyu.ru/skroll-s-uderzhaniem-knopki-myshi-->
+    <script src="https://unpkg.com/scrollbooster@3/dist/scrollbooster.min.js" defer></script>
+
+    <!--Реализация горизонтальной прокрутки-->
+    <script src="JS/dragscroll.js"></script>
+
+    <!--Bootstrap для адаптивной верстки сайта-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <style>
+      html {
+        font-family: NailFont;
+      }
+    </style>
+
+  </head>
+  <body>
+    <div class="p-0 m-0" style="max-width: 99vw;">
+      <div class="row">
+        <div class="rectangle">
+          <div class="lable">
+            <img src="img_svg/lable.png" class="lable-main"/>
+            <div class="lable-text">
+              <img src="img_svg/vector415-u86u.svg" class="lable-letter1"/>
+              <img src="img_svg/vector416-wqn.svg" class="lable-letter2"/>
+              <img src="img_svg/vector417-1o3.svg" class="lable-letter3"/>
+              <img src="img_svg/vector418-jc6s.svg" class="lable-letter4"/>
+              <img src="img_svg/vector419-gab7.svg" class="lable-letter5"/>
+              <img src="img_svg/vector420-hxo6.svg" class="lable-letter6"/>
+              <img src="img_svg/vector421-kmmg.svg" class="lable-letter7"/>
+              <img src="img_svg/vector422-xq9.svg" class="lable-letter8"/>
+              <img src="img_svg/vector423-v3ehf.svg" class="lable-letter9"/>
+            </div>
+            <div class="textNavigationUp">
+              <div class="textNavigationIn">
+                <span>
+                  <a style="font-family: NailFont;" href="#one">Projects</a>
+                </span>
+                <span>
+                  <a style="font-family: NailFont;" href="#two">About me</a>
+                </span>
+              </div>
+                <div class="textNavigationIn" style="gap:0">
+                  <img id="langRuButton" src="img_svg/circle.svg" style="top: 0.5vw; left: -0.35vw; width: 4vw; height: 4vw; position: absolute; z-index: 0; object-fit: contain">
+                  <span style="z-index: 10; position:absolute; top: 0.5vw">
+                    <button style="z-index: 10; font-family: NailFont;" id="langRu">RU</button>
+                  </span>
+                  <img id="langEnButton" src="img_svg/circle.svg" style="top: 4.3vw; left: -0.35vw; width: 4vw; height: 4vw; position: absolute; z-index: 0; object-fit: contain">
+                  <span style="z-index: 10;  position:absolute;  bottom: 0.5vw">
+                    <button style="z-index: 100; font-family: NailFont;" id="langEn">EN</button>
+                  </span>
+                </div>
+            </div>
+          </div>
+        </div>
+        <a name="top"></a>
+        <img style="width: auto; height: 5vmax; padding: 0; border-radius: 5vmax;" src="img_svg/button_to_up.svg" href="#top" id="back-to-top" class="back-to-top" style="width:auto" title="Back to top"/>
+        <div class="home-container col-12 ">
+          <div class="home-frame">
+            <div id="allProjects">
+              <div style="height:3vw"></div>
+                          <div id="1.Choistudio">
+                              <span class="home-text">
+                                  <span style="font-family: NailFont;" id="one">Choistudio</span>
+                              </span>
+                              <div id="wrapper" class="comtainer-scroll-img dragscroll">
+                                  <div class="scroll-img">
+                                      <div style="font-family: NailFont;" id="divNotClicable" class="first-in-row"></div>
+                                          <a data-fancybox="gallery0" data-src="img_svg/imgs/allImg/1.Choistudio/01 Элджей.mp4" data-caption="1">
+                                  <img src="img_svg/imgs/pre/1.Choistudio pre/01 Элджей pre.gif" class="img-rectangle1"/>
+                              </a><a data-fancybox="gallery0" data-src="img_svg/imgs/allImg/1.Choistudio/02 cherep.mp4" data-caption="2">
+                                  <img src="img_svg/imgs/pre/1.Choistudio pre/02 cherep pre.gif" class="img-rectangle2"/>
+                              </a><div class="home-frame71">
+                                  <a data-fancybox="gallery0" data-src="img_svg/imgs/allImg/1.Choistudio/03 crocoboy.png" data-caption="3">
+                                      <img src="img_svg/imgs/pre/1.Choistudio pre/03 crocoboy pre.jpg" class="img-rectangle3"/>
+                                  </a>
+                                  <a data-fancybox="gallery0" data-src="img_svg/imgs/allImg/1.Choistudio/04 cvetok.jpg" data-caption="4">
+                                      <img src="img_svg/imgs/pre/1.Choistudio pre/04 cvetok pre.jpg" class="img-rectangle3"/>
+                                  </a>
+                              </div><a data-fancybox="gallery0" data-src="img_svg/imgs/allImg/1.Choistudio/05 clo 1.jpeg" data-caption="5">
+                                  <img src="img_svg/imgs/pre/1.Choistudio pre/05 clo 1 pre.jpg" class="img-rectangle4"/>
+                              </a><a data-fancybox="gallery0" data-src="img_svg/imgs/allImg/1.Choistudio/06 clo 2.jpg" data-caption="6">
+                                  <img src="img_svg/imgs/pre/1.Choistudio pre/06 clo 2 pre.jpg" class="img-rectangle1"/>
+                              </a><a data-fancybox="gallery0" data-src="img_svg/imgs/allImg/1.Choistudio/28 Zbrush.jpeg" data-caption="7">
+                                  <img src="img_svg/imgs/pre/1.Choistudio pre/28 Zbrush pre.jpeg" class="img-rectangle2"/>
+                              </a><div id="divNotClicable" class="last-in-row"></div>
+                                          </div>
+                                      </div>
+                                      <div class="comtainer-scroll-img dragscroll">
+                                          <div class="scroll-img">
+                                              <div id="divNotClicable" class="first-in-row"></div><div class="home-frame71">
+                                  <a data-fancybox="gallery1" data-src="img_svg/imgs/allImg/1.Choistudio/07 clo 3.jpg" data-caption="8">
+                                      <img src="img_svg/imgs/pre/1.Choistudio pre/07 clo 3 pre.jpg" class="img-rectangle3"/>
+                                  </a>
+                                  <a data-fancybox="gallery1" data-src="img_svg/imgs/allImg/1.Choistudio/08 clo 5.jpeg" data-caption="9">
+                                      <img src="img_svg/imgs/pre/1.Choistudio pre/08 clo 5 pre.jpg" class="img-rectangle3"/>
+                                  </a>
+                              </div><a data-fancybox="gallery1" data-src="img_svg/imgs/allImg/1.Choistudio/09 cyberpunk.mp4" data-caption="10">
+                                  <img src="img_svg/imgs/pre/1.Choistudio pre/09 cyberpunk pre.gif" class="img-rectangle2"/>
+                              </a><a data-fancybox="gallery1" data-src="img_svg/imgs/allImg/1.Choistudio/10 50-50 1.jpg" data-caption="11">
+                                  <img src="img_svg/imgs/pre/1.Choistudio pre/10 50-50 1 pre.jpg" class="img-rectangle1"/>
+                              </a><a data-fancybox="gallery1" data-src="img_svg/imgs/allImg/1.Choistudio/11 50-50 2.jpg" data-caption="12">
+                                  <img src="img_svg/imgs/pre/1.Choistudio pre/11 50-50 2 pre.jpg" class="img-rectangle4"/>
+                              </a><a data-fancybox="gallery1" data-src="img_svg/imgs/allImg/1.Choistudio/12 50-50 3.png" data-caption="13">
+                                  <img src="img_svg/imgs/pre/1.Choistudio pre/12 50-50 3 pre.jpg" class="img-rectangle2"/>
+                              </a><div id="divNotClicable" class="last-in-row"></div>
+                                          </div>
+                                      </div>
+                                      <div class="comtainer-scroll-img dragscroll">
+                                          <div class="scroll-img">
+                                              <div id="divNotClicable" class="first-in-row"></div><a data-fancybox="gallery2" data-src="img_svg/imgs/allImg/1.Choistudio/13 50-50 5 pre.jpg" data-caption="14">
+                                  <img src="img_svg/imgs/pre/1.Choistudio pre/13 50-50 5 pre.jpg" class="img-rectangle2"/>
+                              </a><a data-fancybox="gallery2" data-src="img_svg/imgs/allImg/1.Choistudio/14 Glass 1.jpg" data-caption="15">
+                                  <img src="img_svg/imgs/pre/1.Choistudio pre/14 Glass 1 pre.jpg" class="img-rectangle4"/>
+                              </a><a data-fancybox="gallery2" data-src="img_svg/imgs/allImg/1.Choistudio/15 Glass 2.jpg" data-caption="16">
+                                  <img src="img_svg/imgs/pre/1.Choistudio pre/15 Glass 2 pre.jpg" class="img-rectangle1"/>
+                              </a><div class="home-frame71">
+                                  <a data-fancybox="gallery2" data-src="img_svg/imgs/allImg/1.Choistudio/16 Glass 3.png" data-caption="17">
+                                      <img src="img_svg/imgs/pre/1.Choistudio pre/16 Glass 3 pre.jpg" class="img-rectangle3"/>
+                                  </a>
+                                  <a data-fancybox="gallery2" data-src="img_svg/imgs/allImg/1.Choistudio/17 Moveli.mp4" data-caption="18">
+                                      <img src="img_svg/imgs/pre/1.Choistudio pre/17 Moveli pre.gif" class="img-rectangle3"/>
+                                  </a>
+                              </div><a data-fancybox="gallery2" data-src="img_svg/imgs/allImg/1.Choistudio/18 Stop.jpg" data-caption="19">
+                                  <img src="img_svg/imgs/pre/1.Choistudio pre/18 Stop pre.jpg" class="img-rectangle2"/>
+                              </a><div id="divNotClicable" class="last-in-row"></div>
+                                          </div>
+                                      </div>
+                                      <div class="comtainer-scroll-img dragscroll">
+                                          <div class="scroll-img">
+                                              <div id="divNotClicable" class="first-in-row"></div><a data-fancybox="gallery3" data-src="img_svg/imgs/allImg/1.Choistudio/19 Atomic.jpg" data-caption="20">
+                                  <img src="img_svg/imgs/pre/1.Choistudio pre/19 Atomic pre.png" class="img-rectangle2"/>
+                              </a><a data-fancybox="gallery3" data-src="img_svg/imgs/allImg/1.Choistudio/20 Atomic.jpg" data-caption="21">
+                                  <img src="img_svg/imgs/pre/1.Choistudio pre/20 Atomic pre.jpg" class="img-rectangle4"/>
+                              </a><a data-fancybox="gallery3" data-src="img_svg/imgs/allImg/1.Choistudio/21 skeleton.png" data-caption="22">
+                                  <img src="img_svg/imgs/pre/1.Choistudio pre/21 skeleton pre.jpg" class="img-rectangle1"/>
+                              </a><div class="home-frame71">
+                                  <a data-fancybox="gallery3" data-src="img_svg/imgs/allImg/1.Choistudio/22 skillbox.mp4" data-caption="23">
+                                      <img src="img_svg/imgs/pre/1.Choistudio pre/22 skillbox pre.gif" class="img-rectangle3"/>
+                                  </a>
+                                  <a data-fancybox="gallery3" data-src="img_svg/imgs/allImg/1.Choistudio/23 Peble.png" data-caption="24">
+                                      <img src="img_svg/imgs/pre/1.Choistudio pre/23 Peble pre.jpg" class="img-rectangle3"/>
+                                  </a>
+                              </div><a data-fancybox="gallery3" data-src="img_svg/imgs/allImg/1.Choistudio/24 Pisca.mp4" data-caption="25">
+                                  <img src="img_svg/imgs/pre/1.Choistudio pre/24 Pisca pre.gif" class="img-rectangle2"/>
+                              </a><div id="divNotClicable" class="last-in-row"></div>
+                                          </div>
+                                      </div>
+                                      <div class="comtainer-scroll-img dragscroll">
+                                          <div class="scroll-img">
+                                              <div id="divNotClicable" class="first-in-row"></div><div class="home-frame71">
+                                  <a data-fancybox="gallery5" data-src="img_svg/imgs/allImg/1.Choistudio/25 Hudini voda.mp4" data-caption="26">
+                                      <img src="img_svg/imgs/pre/1.Choistudio pre/25 Hudini voda pre.gif" class="img-rectangle3"/>
+                                  </a>
+                                  <a data-fancybox="gallery5" data-src="img_svg/imgs/allImg/1.Choistudio/26 Telega online.mp4" data-caption="27">
+                                      <img src="img_svg/imgs/pre/1.Choistudio pre/26 Telega online pre.gif" class="img-rectangle3"/>
+                                  </a>
+                              </div><a data-fancybox="gallery5" data-src="img_svg/imgs/allImg/1.Choistudio/27 Test FUD.mp4" data-caption="28">
+                                  <img src="img_svg/imgs/pre/1.Choistudio pre/27 Test FUD pre.gif" class="img-rectangle2_1"/>
+                              </a>
+                                      <div class="text_rectangle">
+                                          <span class="home-text18">
+                                              <span class="langRu" style="font-family: 'Montserrat';">
+                                                  В рамках сотрудничества со студией Choistudio и её NFT-метаверса Phenom Metaverse были выполнены работы для различных целей, включая продажу на NFT-маркетах. Кроме того, в ходе сотрудничества с Gambit (МТС) был разработан дизайн для их киберспортивной команды. Особое внимание было уделено удобству использования и визуальной привлекательности, чтобы обеспечить уникальный пользовательский опыт.
+                                              </span>
+                                              <span class="langEn" >
+                                                  In collaboration with Choistudio and its NFT Phenom Metaverse projects were fulfilled for a variety of goals including selling on the NFT-markets. Besides, design for the cybersport team was made in cooperation with Gambit (MTC). Particular attention was paid to usability and visual appeal in order to achieve unique user experience.
+                                              </span>
+                                          </span>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div><div style="height:3vw"></div>
+                              <div id="8. Manki Panki">
+                                  <span class="home-text">
+                                      <span style="font-family: NailFont;" id="one"> Manki Panki</span>
+                                  </span>
+                                  <div id="wrapper" class="comtainer-scroll-img dragscroll">
+                                      <div class="scroll-img">
+                                          <div style="font-family: NailFont;" id="divNotClicable" class="first-in-row"></div>
+                                          <a data-fancybox="gallery70" data-src="img_svg/imgs/allImg/8. Manki Panki/01.jpg" data-caption="1">
+                                  <img src="img_svg/imgs/pre/8. Manki Panki Pre/01 pre.jpg" class="img-rectangle4"/>
+                              </a><a data-fancybox="gallery70" data-src="img_svg/imgs/allImg/8. Manki Panki/02.png" data-caption="2">
+                                  <img src="img_svg/imgs/pre/8. Manki Panki Pre/02 pre.jpg" class="img-rectangle4"/>
+                              </a><a data-fancybox="gallery70" data-src="img_svg/imgs/allImg/8. Manki Panki/03.jpg" data-caption="3">
+                                  <img src="img_svg/imgs/pre/8. Manki Panki Pre/03 pre.jpg" class="img-rectangle4"/>
+                              </a><a data-fancybox="gallery70" data-src="img_svg/imgs/allImg/8. Manki Panki/04.png" data-caption="4">
+                                  <img src="img_svg/imgs/pre/8. Manki Panki Pre/04 pre.jpg" class="img-rectangle4"/>
+                              </a><a data-fancybox="gallery70" data-src="img_svg/imgs/allImg/8. Manki Panki/05.jpg" data-caption="5">
+                                  <img src="img_svg/imgs/pre/8. Manki Panki Pre/05 pre.jpg" class="img-rectangle4"/>
+                              </a><a data-fancybox="gallery70" data-src="img_svg/imgs/allImg/8. Manki Panki/06.png" data-caption="6">
+                                  <img src="img_svg/imgs/pre/8. Manki Panki Pre/06 pre.jpg" class="img-rectangle4"/>
+                              </a><div id="divNotClicable" class="last-in-row"></div>
+                                          </div>
+                                      </div>
+                                      <div class="comtainer-scroll-img dragscroll">
+                                          <div class="scroll-img">
+                                              <div id="divNotClicable" class="first-in-row"></div><a data-fancybox="gallery71" data-src="img_svg/imgs/allImg/8. Manki Panki/07.jpg" data-caption="7">
+                                  <img src="img_svg/imgs/pre/8. Manki Panki Pre/07 pre.jpg" class="img-rectangle4"/>
+                              </a><a data-fancybox="gallery71" data-src="img_svg/imgs/allImg/8. Manki Panki/08.png" data-caption="8">
+                                  <img src="img_svg/imgs/pre/8. Manki Panki Pre/08 pre.jpg" class="img-rectangle4"/>
+                              </a><a data-fancybox="gallery71" data-src="img_svg/imgs/allImg/8. Manki Panki/09.jpg" data-caption="9">
+                                  <img src="img_svg/imgs/pre/8. Manki Panki Pre/09 pre.jpg" class="img-rectangle4"/>
+                              </a><a data-fancybox="gallery71" data-src="img_svg/imgs/allImg/8. Manki Panki/10.png" data-caption="10">
+                                  <img src="img_svg/imgs/pre/8. Manki Panki Pre/10 pre.jpg" class="img-rectangle4"/>
+                              </a><a data-fancybox="gallery71" data-src="img_svg/imgs/allImg/8. Manki Panki/11.png" data-caption="11">
+                                  <img src="img_svg/imgs/pre/8. Manki Panki Pre/11 pre.jpg" class="img-rectangle4"/>
+                              </a><div id="divNotClicable" class="last-in-row"></div>
+                                      </div>
+                                  </div>
+                                  <div class="text_rectangle1">
+                                      <span class="home-text-1">
+                                          <span class="langRu" style="font-family: 'Montserrat'">
+                                              Плакаты для Московского музея каллиграфии и клубов в Москве и Белграде были разработаны в студии MankPanki. Эти уникальные дизайны сочетают современные тренды с элементами каллиграфии, создавая запоминающиеся визуальные образы для привлечения внимания к разнообразным культурным событиям.
+                                          </span>
+                                          <span class="langEn">
+                                              Posters for the Moscow Calligraphy Museum and clubs in Moscow and Belgrade were developed during the work at MankPanki. These unique designs blend contemporary trends with calligraphic elements, creating memorable visual images to draw attention to diverse cultural events.
+                                          </span>
+                                      </span>
+                                  </div>
+                              </div><div style="height:3vw"></div>
+                          <div id="3.Cheelee">
+                              <span class="home-text">
+                                  <span style="font-family: NailFont;" id="one">Cheelee</span>
+                              </span>
+                              <div id="wrapper" class="comtainer-scroll-img dragscroll">
+                                  <div class="scroll-img">
+                                      <div style="font-family: NailFont;" id="divNotClicable" class="first-in-row"></div>
+                                          <div class="home-frame71">
+                                  <a data-fancybox="gallery20" data-src="img_svg/imgs/allImg/3.Cheelee/01.mp4" data-caption="1">
+                                      <img src="img_svg/imgs/pre/3.Cheelee pre/01-pre.gif" class="img-rectangle3"/>
+                                  </a>
+                                  <a data-fancybox="gallery20" data-src="img_svg/imgs/allImg/3.Cheelee/02.mp4" data-caption="2">
+                                      <img src="img_svg/imgs/pre/3.Cheelee pre/02-pre.gif" class="img-rectangle3"/>
+                                  </a>
+                              </div><a data-fancybox="gallery20" data-src="img_svg/imgs/allImg/3.Cheelee/03.mp4" data-caption="3">
+                                  <img src="img_svg/imgs/pre/3.Cheelee pre/03-pre.gif" class="img-rectangle2"/>
+                              </a><a data-fancybox="gallery20" data-src="img_svg/imgs/allImg/3.Cheelee/04.mp4" data-caption="4">
+                                  <img src="img_svg/imgs/pre/3.Cheelee pre/04-pre.gif" class="img-rectangle1"/>
+                              </a><a data-fancybox="gallery20" data-src="img_svg/imgs/allImg/3.Cheelee/05.gif" data-caption="5">
+                                  <img src="img_svg/imgs/pre/3.Cheelee pre/05-pre.gif" class="img-rectangle4"/>
+                              </a><div class="home-frame71">
+                                  <a data-fancybox="gallery20" data-src="img_svg/imgs/allImg/3.Cheelee/06.png" data-caption="6">
+                                      <img src="img_svg/imgs/pre/3.Cheelee pre/06 pre.jpg" class="img-rectangle3"/>
+                                  </a>
+                                  <a data-fancybox="gallery20" data-src="img_svg/imgs/allImg/3.Cheelee/07.png" data-caption="7">
+                                      <img src="img_svg/imgs/pre/3.Cheelee pre/07 pre.jpg" class="img-rectangle3"/>
+                                  </a>
+                              </div><a data-fancybox="gallery20" data-src="img_svg/imgs/allImg/3.Cheelee/08.png" data-caption="8">
+                                  <img src="img_svg/imgs/pre/3.Cheelee pre/08 pre.jpg" class="img-rectangle2"/>
+                              </a><a data-fancybox="gallery20" data-src="img_svg/imgs/allImg/3.Cheelee/09.mp4" data-caption="9">
+                                  <img src="img_svg/imgs/pre/3.Cheelee pre/09-pre.gif" class="img-rectangle1"/>
+                              </a><div id="divNotClicable" class="last-in-row"></div>
+                                          </div>
+                                      </div>
+                                      <div class="comtainer-scroll-img dragscroll">
+                                          <div class="scroll-img">
+                                              <div id="divNotClicable" class="first-in-row"></div><a data-fancybox="gallery21" data-src="img_svg/imgs/allImg/3.Cheelee/10.mp4" data-caption="10">
+                                  <img src="img_svg/imgs/pre/3.Cheelee pre/10-pre.gif" class="img-rectangle2"/>
+                              </a><a data-fancybox="gallery21" data-src="img_svg/imgs/allImg/3.Cheelee/11.gif" data-caption="11">
+                                  <img src="img_svg/imgs/pre/3.Cheelee pre/11-pre.gif" class="img-rectangle4"/>
+                              </a><a data-fancybox="gallery21" data-src="img_svg/imgs/allImg/3.Cheelee/12.mp4" data-caption="12">
+                                  <img src="img_svg/imgs/pre/3.Cheelee pre/12-pre.gif" class="img-rectangle1"/>
+                              </a><div class="home-frame71">
+                                  <a data-fancybox="gallery21" data-src="img_svg/imgs/allImg/3.Cheelee/13.jpeg" data-caption="13">
+                                      <img src="img_svg/imgs/pre/3.Cheelee pre/13 pre.jpg" class="img-rectangle3"/>
+                                  </a>
+                                  <a data-fancybox="gallery21" data-src="img_svg/imgs/allImg/3.Cheelee/14.jpeg" data-caption="14">
+                                      <img src="img_svg/imgs/pre/3.Cheelee pre/14 pre.jpg" class="img-rectangle3"/>
+                                  </a>
+                              </div><a data-fancybox="gallery21" data-src="img_svg/imgs/allImg/3.Cheelee/15 2.mp4" data-caption="15">
+                                  <img src="img_svg/imgs/pre/3.Cheelee pre/15-pre.gif" class="img-rectangle2"/>
+                              </a><a data-fancybox="gallery21" data-src="img_svg/imgs/allImg/3.Cheelee/16.mp4" data-caption="16">
+                                  <img src="img_svg/imgs/pre/3.Cheelee pre/16-pre.gif" class="img-rectangle4"/>
+                              </a><a data-fancybox="gallery21" data-src="img_svg/imgs/allImg/3.Cheelee/17.png" data-caption="17">
+                                  <img src="img_svg/imgs/pre/3.Cheelee pre/17 pre.jpg" class="img-rectangle1"/>
+                              </a><div id="divNotClicable" class="last-in-row"></div>
+                                          </div>
+                                      </div>
+                                      <div class="comtainer-scroll-img dragscroll">
+                                          <div class="scroll-img">
+                                              <div id="divNotClicable" class="first-in-row"></div><div class="home-frame71">
+                                  <a data-fancybox="gallery23" data-src="img_svg/imgs/allImg/3.Cheelee/18.png" data-caption="18">
+                                      <img src="img_svg/imgs/pre/3.Cheelee pre/18 pre.jpg" class="img-rectangle3"/>
+                                  </a>
+                                  <a data-fancybox="gallery23" data-src="img_svg/imgs/allImg/3.Cheelee/19.jpeg" data-caption="19">
+                                      <img src="img_svg/imgs/pre/3.Cheelee pre/19 pre.jpg" class="img-rectangle3"/>
+                                  </a>
+                              </div><a data-fancybox="gallery23" data-src="img_svg/imgs/allImg/3.Cheelee/20.gif" data-caption="20">
+                                  <img src="img_svg/imgs/pre/3.Cheelee pre/20-pre.gif" class="img-rectangle2_1"/>
+                              </a>
+                                      <div class="text_rectangle">
+                                          <span class="home-text18">
+                                              <span class="langRu" style="font-family: 'Montserrat';">
+                                                  Motion, баннеры и 3D работы для бренда IT-компании Cheelee, в которой я проработал в качестве дизайнера.
+                                              </span>
+                                              <span class="langEn" >
+                                                  Motion, banners and 3D-projects for the brand of the Cheelee IT-company where I worked as a designer.
+                                              </span>
+                                          </span>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div><div style="height:3vw"></div>
+                          <div id="6.Ormi">
+                              <span class="home-text">
+                                  <span style="font-family: NailFont;" id="one">Ormi</span>
+                              </span>
+                              <div id="wrapper" class="comtainer-scroll-img dragscroll">
+                                  <div class="scroll-img">
+                                      <div style="font-family: NailFont;" id="divNotClicable" class="first-in-row"></div>
+                                          <a data-fancybox="gallery50" data-src="img_svg/imgs/allImg/6.Ormi/01.MP4" data-caption="1">
+                                  <img src="img_svg/imgs/pre/6.Ormi Pre/01 pre.gif" class="img-rectangle2"/>
+                              </a><a data-fancybox="gallery50" data-src="img_svg/imgs/allImg/6.Ormi/02.mp4" data-caption="2">
+                                  <img src="img_svg/imgs/pre/6.Ormi Pre/02 pre.gif" class="img-rectangle4"/>
+                              </a><div class="home-frame71">
+                                  <a data-fancybox="gallery50" data-src="img_svg/imgs/allImg/6.Ormi/03.mp4" data-caption="3">
+                                      <img src="img_svg/imgs/pre/6.Ormi Pre/03 pre.gif" class="img-rectangle3"/>
+                                  </a>
+                                  <a data-fancybox="gallery50" data-src="img_svg/imgs/allImg/6.Ormi/04.mp4" data-caption="4">
+                                      <img src="img_svg/imgs/pre/6.Ormi Pre/04 pre.gif" class="img-rectangle3"/>
+                                  </a>
+                              </div><a data-fancybox="gallery50" data-src="img_svg/imgs/allImg/6.Ormi/05.mp4" data-caption="5">
+                                  <img src="img_svg/imgs/pre/6.Ormi Pre/05 pre.gif" class="img-rectangle1"/>
+                              </a><div id="divNotClicable" class="last-in-row"></div>
+                                          </div>
+                                      </div>
+                                      <div class="comtainer-scroll-img dragscroll">
+                                          <div class="scroll-img">
+                                              <div id="divNotClicable" class="first-in-row"></div><div class="home-frame71">
+                                  <a data-fancybox="gallery52" data-src="img_svg/imgs/allImg/6.Ormi/06.MOV" data-caption="6">
+                                      <img src="img_svg/imgs/pre/6.Ormi Pre/06 pre.gif" class="img-rectangle3"/>
+                                  </a>
+                                  <a data-fancybox="gallery52" data-src="img_svg/imgs/allImg/6.Ormi/07.MP4" data-caption="7">
+                                      <img src="img_svg/imgs/pre/6.Ormi Pre/07 pre.gif" class="img-rectangle3"/>
+                                  </a>
+                              </div><a data-fancybox="gallery52" data-src="img_svg/imgs/allImg/6.Ormi/08.mp4" data-caption="8">
+                                  <img src="img_svg/imgs/pre/6.Ormi Pre/08 pre.gif" class="img-rectangle2_1"/>
+                              </a>
+                                      <div class="text_rectangle">
+                                          <span class="home-text18">
+                                              <span class="langRu" style="font-family: 'Montserrat';">
+                                                  3D синематики для бренда Ormi.
+                                              </span>
+                                              <span class="langEn" >
+                                                  3D semantics for the Ormi brand
+                                              </span>
+                                          </span>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div><div style="height:3vw"></div>
+                          <div id="2.Package">
+                              <span class="home-text">
+                                  <span style="font-family: NailFont;" id="one">Package</span>
+                              </span>
+                              <div id="wrapper" class="comtainer-scroll-img dragscroll">
+                                  <div class="scroll-img">
+                                      <div style="font-family: NailFont;" id="divNotClicable" class="first-in-row"></div>
+                                          <a data-fancybox="gallery10" data-src="img_svg/imgs/allImg/2.Package/01. Baum.JPG" data-caption="1">
+                                  <img src="img_svg/imgs/pre/2.Package pre/01. Baum pre.jpg" class="img-rectangle1"/>
+                              </a><a data-fancybox="gallery10" data-src="img_svg/imgs/allImg/2.Package/02. joj1.png" data-caption="2">
+                                  <img src="img_svg/imgs/pre/2.Package pre/02. joj1 Pre.jpg" class="img-rectangle4"/>
+                              </a><a data-fancybox="gallery10" data-src="img_svg/imgs/allImg/2.Package/03.joj2.png" data-caption="3">
+                                  <img src="img_svg/imgs/pre/2.Package pre/03.joj2 Pre.jpg" class="img-rectangle2"/>
+                              </a><div class="home-frame71">
+                                  <a data-fancybox="gallery10" data-src="img_svg/imgs/allImg/2.Package/04.Squira.png" data-caption="4">
+                                      <img src="img_svg/imgs/pre/2.Package pre/04.Squira pre.jpg" class="img-rectangle3"/>
+                                  </a>
+                                  <a data-fancybox="gallery10" data-src="img_svg/imgs/allImg/2.Package/05.Squira.png" data-caption="5">
+                                      <img src="img_svg/imgs/pre/2.Package pre/05.Squira pre.jpg" class="img-rectangle3"/>
+                                  </a>
+                              </div><a data-fancybox="gallery10" data-src="img_svg/imgs/allImg/2.Package/06. Plantario.png" data-caption="6">
+                                  <img src="img_svg/imgs/pre/2.Package pre/06. Plantario pre.jpg" class="img-rectangle1"/>
+                              </a><div id="divNotClicable" class="last-in-row"></div>
+                                          </div>
+                                      </div>
+                                      <div class="comtainer-scroll-img dragscroll">
+                                          <div class="scroll-img">
+                                              <div id="divNotClicable" class="first-in-row"></div><div class="home-frame71">
+                                  <a data-fancybox="gallery11" data-src="img_svg/imgs/allImg/2.Package/07. Hagi.png" data-caption="7">
+                                      <img src="img_svg/imgs/pre/2.Package pre/07. Hagi pre.jpg" class="img-rectangle3"/>
+                                  </a>
+                                  <a data-fancybox="gallery11" data-src="img_svg/imgs/allImg/2.Package/08.Altai 1.png" data-caption="8">
+                                      <img src="img_svg/imgs/pre/2.Package pre/08.Altai 1 pre.jpg" class="img-rectangle3"/>
+                                  </a>
+                              </div><a data-fancybox="gallery11" data-src="img_svg/imgs/allImg/2.Package/09.Altai 2.png" data-caption="9">
+                                  <img src="img_svg/imgs/pre/2.Package pre/09.Altai 2 pre.jpg" class="img-rectangle2"/>
+                              </a><a data-fancybox="gallery11" data-src="img_svg/imgs/allImg/2.Package/10.w gin 1.png" data-caption="10">
+                                  <img src="img_svg/imgs/pre/2.Package pre/10.w gin 1 pre.jpg" class="img-rectangle4"/>
+                              </a><a data-fancybox="gallery11" data-src="img_svg/imgs/allImg/2.Package/11.w gin 2.png" data-caption="11">
+                                  <img src="img_svg/imgs/pre/2.Package pre/11.w gin 2 pre.jpg" class="img-rectangle1"/>
+                              </a><a data-fancybox="gallery11" data-src="img_svg/imgs/allImg/2.Package/12.whealer 0.jpeg" data-caption="12">
+                                  <img src="img_svg/imgs/pre/2.Package pre/12.w gin 3pre.jpg" class="img-rectangle2"/>
+                              </a><div id="divNotClicable" class="last-in-row"></div>
+                                          </div>
+                                      </div>
+                                      <div class="comtainer-scroll-img dragscroll">
+                                          <div class="scroll-img">
+                                              <div id="divNotClicable" class="first-in-row"></div><a data-fancybox="gallery12" data-src="img_svg/imgs/allImg/2.Package/13.whealer 1.jpg" data-caption="13">
+                                  <img src="img_svg/imgs/pre/2.Package pre/13.whealer 1 pre.jpg" class="img-rectangle2"/>
+                              </a><a data-fancybox="gallery12" data-src="img_svg/imgs/allImg/2.Package/14.whealer 2.jpg" data-caption="14">
+                                  <img src="img_svg/imgs/pre/2.Package pre/14.whealer 2 pre.jpg" class="img-rectangle4"/>
+                              </a><div class="home-frame71">
+                                  <a data-fancybox="gallery12" data-src="img_svg/imgs/allImg/2.Package/15.whealer 3.jfif" data-caption="15">
+                                      <img src="img_svg/imgs/pre/2.Package pre/15.whealer 3 pre.jpg" class="img-rectangle3"/>
+                                  </a>
+                                  <a data-fancybox="gallery12" data-src="img_svg/imgs/allImg/2.Package/16.whealer 4.jpg" data-caption="16">
+                                      <img src="img_svg/imgs/pre/2.Package pre/16.whealer 4 pre.jpg" class="img-rectangle3"/>
+                                  </a>
+                              </div><a data-fancybox="gallery12" data-src="img_svg/imgs/allImg/2.Package/17.whealer 5.png" data-caption="17">
+                                  <img src="img_svg/imgs/pre/2.Package pre/17.whealer 5 pre.jpg" class="img-rectangle1"/>
+                              </a><a data-fancybox="gallery12" data-src="img_svg/imgs/allImg/2.Package/18.korob.gif" data-caption="18">
+                                  <img src="img_svg/imgs/pre/2.Package pre/18.korob Pre.gif" class="img-rectangle2"/>
+                              </a><div id="divNotClicable" class="last-in-row"></div>
+                                          </div>
+                                      </div>
+                                      <div class="comtainer-scroll-img dragscroll">
+                                          <div class="scroll-img">
+                                              <div id="divNotClicable" class="first-in-row"></div><a data-fancybox="gallery13" data-src="img_svg/imgs/allImg/2.Package/19.ne.png" data-caption="19">
+                                  <img src="img_svg/imgs/pre/2.Package pre/19.ne pre.jpg" class="img-rectangle2"/>
+                              </a><a data-fancybox="gallery13" data-src="img_svg/imgs/allImg/2.Package/20.ne.png" data-caption="20">
+                                  <img src="img_svg/imgs/pre/2.Package pre/20.ne pre.jpg" class="img-rectangle4"/>
+                              </a><div class="home-frame71">
+                                  <a data-fancybox="gallery13" data-src="img_svg/imgs/allImg/2.Package/21.ne.png" data-caption="21">
+                                      <img src="img_svg/imgs/pre/2.Package pre/21.ne pre.jpg" class="img-rectangle3"/>
+                                  </a>
+                                  <a data-fancybox="gallery13" data-src="img_svg/imgs/allImg/2.Package/22.ne.png" data-caption="22">
+                                      <img src="img_svg/imgs/pre/2.Package pre/22.ne pre.jpg" class="img-rectangle3"/>
+                                  </a>
+                              </div><a data-fancybox="gallery13" data-src="img_svg/imgs/allImg/2.Package/23.ne.png" data-caption="23">
+                                  <img src="img_svg/imgs/pre/2.Package pre/23.ne pre.jpg" class="img-rectangle1"/>
+                              </a><div id="divNotClicable" class="last-in-row"></div>
+                                          </div>
+                                      </div>
+                                      <div class="comtainer-scroll-img dragscroll">
+                                          <div class="scroll-img">
+                                              <div id="divNotClicable" class="first-in-row"></div><div class="home-frame71">
+                                  <a data-fancybox="gallery15" data-src="img_svg/imgs/allImg/2.Package/24.ne.png" data-caption="24">
+                                      <img src="img_svg/imgs/pre/2.Package pre/24.ne pre.png" class="img-rectangle3"/>
+                                  </a>
+                                  <a data-fancybox="gallery15" data-src="img_svg/imgs/allImg/2.Package/25.ne.jpg" data-caption="25">
+                                      <img src="img_svg/imgs/pre/2.Package pre/25.ne pre.jpg" class="img-rectangle3"/>
+                                  </a>
+                              </div><a data-fancybox="gallery15" data-src="img_svg/imgs/allImg/2.Package/26.kom.gif" data-caption="26">
+                                  <img src="img_svg/imgs/pre/2.Package pre/26.kom pre.gif" class="img-rectangle2"/>
+                              </a>
+                                      <div class="text_rectangle">
+                                          <span class="home-text18">
+                                              <span class="langRu" style="font-family: 'Montserrat';">
+                                                  Широкий спектр проектов, для создания которых применялся оригинальный и функциональный подход. Дизайн работ выполнен в ходе сотрудничества с такими известными брендами, как: <br>● Baum — казанский бренд косметики;<br>● 4:33 — бренд коммуникационных карточных игр; <br>● GraywhaleGin — бренд алкогольной продукции;<br>● Работы с подрядчиками компании MankiPanki.
+                                              </span>
+                                              <span class="langEn" >
+                                                  Wide range of projects, for which creating an original and functional approach was used. Work design was released in collaboration with such famous brands as:<br>● Baum — Kazan cosmetics;<br>● 4:33 — communication card games;<br>● GraywhaleGin — alcohol products;<br>● projects with contractors of the MankiPanki company.
+                                              </span>
+                                          </span>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div><div style="height:3vw"></div>
+                          <div id="5. Shoes and kicks">
+                              <span class="home-text">
+                                  <span style="font-family: NailFont;" id="one"> Shoes and kicks</span>
+                              </span>
+                              <div id="wrapper" class="comtainer-scroll-img dragscroll">
+                                  <div class="scroll-img">
+                                      <div style="font-family: NailFont;" id="divNotClicable" class="first-in-row"></div>
+                                          <a data-fancybox="gallery40" data-src="img_svg/imgs/allImg/5. Shoes and kicks/01.png" data-caption="1">
+                                  <img src="img_svg/imgs/pre/5. Shoes and kicks pre/01 pre.jpg" class="img-rectangle1"/>
+                              </a><a data-fancybox="gallery40" data-src="img_svg/imgs/allImg/5. Shoes and kicks/02.png" data-caption="2">
+                                  <img src="img_svg/imgs/pre/5. Shoes and kicks pre/02 pre.jpg" class="img-rectangle2"/>
+                              </a><div class="home-frame71">
+                                  <a data-fancybox="gallery40" data-src="img_svg/imgs/allImg/5. Shoes and kicks/03.jpg" data-caption="3">
+                                      <img src="img_svg/imgs/pre/5. Shoes and kicks pre/03 pre.jpg" class="img-rectangle3"/>
+                                  </a>
+                                  <a data-fancybox="gallery40" data-src="img_svg/imgs/allImg/5. Shoes and kicks/04.png" data-caption="4">
+                                      <img src="img_svg/imgs/pre/5. Shoes and kicks pre/04 pre.jpg" class="img-rectangle3"/>
+                                  </a>
+                              </div><a data-fancybox="gallery40" data-src="img_svg/imgs/allImg/5. Shoes and kicks/05.jpg" data-caption="5">
+                                  <img src="img_svg/imgs/pre/5. Shoes and kicks pre/05 pre.jpg" class="img-rectangle4"/>
+                              </a><a data-fancybox="gallery40" data-src="img_svg/imgs/allImg/5. Shoes and kicks/06.jpg" data-caption="6">
+                                  <img src="img_svg/imgs/pre/5. Shoes and kicks pre/06 pre.png" class="img-rectangle1"/>
+                              </a><div id="divNotClicable" class="last-in-row"></div>
+                                          </div>
+                                      </div>
+                                      <div class="comtainer-scroll-img dragscroll">
+                                          <div class="scroll-img">
+                                              <div id="divNotClicable" class="first-in-row"></div><div class="home-frame71">
+                                  <a data-fancybox="gallery41" data-src="img_svg/imgs/allImg/5. Shoes and kicks/07.jpg" data-caption="7">
+                                      <img src="img_svg/imgs/pre/5. Shoes and kicks pre/07 pre.jpg" class="img-rectangle3"/>
+                                  </a>
+                                  <a data-fancybox="gallery41" data-src="img_svg/imgs/allImg/5. Shoes and kicks/08.jpg" data-caption="8">
+                                      <img src="img_svg/imgs/pre/5. Shoes and kicks pre/08 pre.jpg" class="img-rectangle3"/>
+                                  </a>
+                              </div><a data-fancybox="gallery41" data-src="img_svg/imgs/allImg/5. Shoes and kicks/09.jpg" data-caption="9">
+                                  <img src="img_svg/imgs/pre/5. Shoes and kicks pre/09 pre.jpg" class="img-rectangle2"/>
+                              </a><a data-fancybox="gallery41" data-src="img_svg/imgs/allImg/5. Shoes and kicks/10.jpg" data-caption="10">
+                                  <img src="img_svg/imgs/pre/5. Shoes and kicks pre/10 pre.png" class="img-rectangle1"/>
+                              </a><a data-fancybox="gallery41" data-src="img_svg/imgs/allImg/5. Shoes and kicks/11.jpg" data-caption="11">
+                                  <img src="img_svg/imgs/pre/5. Shoes and kicks pre/11 pre.jpg" class="img-rectangle4"/>
+                              </a><a data-fancybox="gallery41" data-src="img_svg/imgs/allImg/5. Shoes and kicks/12.jpg" data-caption="12">
+                                  <img src="img_svg/imgs/pre/5. Shoes and kicks pre/12 pre.jpg" class="img-rectangle2"/>
+                              </a><div id="divNotClicable" class="last-in-row"></div>
+                                          </div>
+                                      </div>
+                                      <div class="comtainer-scroll-img dragscroll">
+                                          <div class="scroll-img">
+                                              <div id="divNotClicable" class="first-in-row"></div><a data-fancybox="gallery42" data-src="img_svg/imgs/allImg/5. Shoes and kicks/13.jpg" data-caption="13">
+                                  <img src="img_svg/imgs/pre/5. Shoes and kicks pre/13 pre.jpg" class="img-rectangle2"/>
+                              </a><a data-fancybox="gallery42" data-src="img_svg/imgs/allImg/5. Shoes and kicks/14.jpg" data-caption="14">
+                                  <img src="img_svg/imgs/pre/5. Shoes and kicks pre/14 pre.jpg" class="img-rectangle4"/>
+                              </a><a data-fancybox="gallery42" data-src="img_svg/imgs/allImg/5. Shoes and kicks/15.jpg" data-caption="15">
+                                  <img src="img_svg/imgs/pre/5. Shoes and kicks pre/15 pre.png" class="img-rectangle1"/>
+                              </a><div class="home-frame71">
+                                  <a data-fancybox="gallery42" data-src="img_svg/imgs/allImg/5. Shoes and kicks/16.jpg" data-caption="16">
+                                      <img src="img_svg/imgs/pre/5. Shoes and kicks pre/16 pre.jpg" class="img-rectangle3"/>
+                                  </a>
+                                  <a data-fancybox="gallery42" data-src="img_svg/imgs/allImg/5. Shoes and kicks/17.png" data-caption="17">
+                                      <img src="img_svg/imgs/pre/5. Shoes and kicks pre/17 pre.jpg" class="img-rectangle3"/>
+                                  </a>
+                              </div><a data-fancybox="gallery42" data-src="img_svg/imgs/allImg/5. Shoes and kicks/18.jpg" data-caption="18">
+                                  <img src="img_svg/imgs/pre/5. Shoes and kicks pre/18 pre.jpg" class="img-rectangle2"/>
+                              </a><div id="divNotClicable" class="last-in-row"></div>
+                                          </div>
+                                      </div>
+                                      <div class="comtainer-scroll-img dragscroll">
+                                          <div class="scroll-img">
+                                              <div id="divNotClicable" class="first-in-row"></div><a data-fancybox="gallery44" data-src="img_svg/imgs/allImg/5. Shoes and kicks/19.png" data-caption="19">
+                                  <img src="img_svg/imgs/pre/5. Shoes and kicks pre/19 pre.jpg" class="img-rectangle2"/>
+                              </a><div class="home-frame71">
+                                  <a data-fancybox="gallery44" data-src="img_svg/imgs/allImg/5. Shoes and kicks/20.png" data-caption="20">
+                                      <img src="img_svg/imgs/pre/5. Shoes and kicks pre/20 pre.jpg" class="img-rectangle3"/>
+                                  </a>
+                                  <a data-fancybox="gallery44" data-src="img_svg/imgs/allImg/5. Shoes and kicks/21.jpg" data-caption="21">
+                                      <img src="img_svg/imgs/pre/5. Shoes and kicks pre/21 pre.jpg" class="img-rectangle3"/>
+                                  </a>
+                              </div>
+                                      <div class="text_rectangle">
+                                          <span class="home-text18">
+                                              <span class="langRu" style="font-family: 'Montserrat';">
+                                                  Детализированные 3D модели кроссовок для конкурсов Adidas, Yeezy, Skechers, Grounds, Dingyun Zhang. На этапе создания концептов сохранялись характерные черты брендового стиля и соблюдались требования к техническому заданию.
+                                              </span>
+                                              <span class="langEn" >
+                                                  Detailed 3D sneakers for the Adidas, Yeezy, Skechers, Grounds, Dingyun Zhang competitions. While concept creating the brand identity was retained and the technical task requirements were complied with.
+                                              </span>
+                                          </span>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div><div style="height:3vw"></div>
+                          <div id="4.Teenage Engineering">
+                              <span class="home-text">
+                                  <span style="font-family: NailFont;" id="one">Teenage Engineering</span>
+                              </span>
+                              <div id="wrapper" class="comtainer-scroll-img dragscroll">
+                                  <div class="scroll-img">
+                                      <div style="font-family: NailFont;" id="divNotClicable" class="first-in-row"></div>
+                                          <a data-fancybox="gallery30" data-src="img_svg/imgs/allImg/4.Teenage Engineering/01 computer0.png" data-caption="1">
+                                  <img src="img_svg/imgs/pre/4.Teenage Engineering Pre/01 computer0 pre.jpg" class="img-rectangle2"/>
+                              </a><a data-fancybox="gallery30" data-src="img_svg/imgs/allImg/4.Teenage Engineering/02 computer0.png" data-caption="2">
+                                  <img src="img_svg/imgs/pre/4.Teenage Engineering Pre/02 computer0 pre.jpg" class="img-rectangle4"/>
+                              </a><div class="home-frame71">
+                                  <a data-fancybox="gallery30" data-src="img_svg/imgs/allImg/4.Teenage Engineering/03 computer0.png" data-caption="3">
+                                      <img src="img_svg/imgs/pre/4.Teenage Engineering Pre/03 computer0 pre.jpg" class="img-rectangle3"/>
+                                  </a>
+                                  <a data-fancybox="gallery30" data-src="img_svg/imgs/allImg/4.Teenage Engineering/04 computer0.png" data-caption="4">
+                                      <img src="img_svg/imgs/pre/4.Teenage Engineering Pre/04 computer0 pre.jpg" class="img-rectangle3"/>
+                                  </a>
+                              </div><a data-fancybox="gallery30" data-src="img_svg/imgs/allImg/4.Teenage Engineering/05 ruhrgerat 3.jpg" data-caption="5">
+                                  <img src="img_svg/imgs/pre/4.Teenage Engineering Pre/05 ruhrgerat 3 pre.jpg" class="img-rectangle1"/>
+                              </a><a data-fancybox="gallery30" data-src="img_svg/imgs/allImg/4.Teenage Engineering/06 ruhrgerat 2.jpg" data-caption="6">
+                                  <img src="img_svg/imgs/pre/4.Teenage Engineering Pre/06 ruhrgerat 2 pre.jpg" class="img-rectangle2"/>
+                              </a><a data-fancybox="gallery30" data-src="img_svg/imgs/allImg/4.Teenage Engineering/07 Screen.mp4" data-caption="7">
+                                  <img src="img_svg/imgs/pre/4.Teenage Engineering Pre/07 Screen pre.gif" class="img-rectangle4"/>
+                              </a><div id="divNotClicable" class="last-in-row"></div>
+                                          </div>
+                                      </div>
+                                      <div class="comtainer-scroll-img dragscroll">
+                                          <div class="scroll-img">
+                                              <div id="divNotClicable" class="first-in-row"></div><a data-fancybox="gallery32" data-src="img_svg/imgs/allImg/4.Teenage Engineering/08 ruhrgerat 2.mp4" data-caption="8">
+                                  <img src="img_svg/imgs/pre/4.Teenage Engineering Pre/08 ruhrgerat 2 pre.gif" class="img-rectangle2"/>
+                              </a><div class="home-frame71">
+                                  <a data-fancybox="gallery32" data-src="img_svg/imgs/allImg/4.Teenage Engineering/09 ruhrgerat 0.jpg" data-caption="9">
+                                      <img src="img_svg/imgs/pre/4.Teenage Engineering Pre/09 ruhrgerat 0 pre.jpg" class="img-rectangle3"/>
+                                  </a>
+                                  <a data-fancybox="gallery32" data-src="img_svg/imgs/allImg/4.Teenage Engineering/10 ruhrgerat 4.jpg" data-caption="10">
+                                      <img src="img_svg/imgs/pre/4.Teenage Engineering Pre/10 ruhrgerat 4 pre.jpg" class="img-rectangle3"/>
+                                  </a>
+                              </div>
+                                      <div class="text_rectangle">
+                                          <span class="home-text18">
+                                              <span class="langRu" style="font-family: 'Montserrat';">
+                                                  Концепты, созданные для компании Teenage Engineering, команды Ильи Колганова. Реализованные проекты:<br>● корпус для компьютера «Computer–0»;<br>● 3D манипулятор «Ruhrgerat»;</br>● анимированный эвент-стенд.
+                                              </span>
+                                              <span class="langEn" >
+                                                  Concepts made for the Teenage Engineering company, Ilya Kolganov’s team. Realized projects:<br>● case for «Computer–0»;<br>● 3D device «Ruhrgerat»;<br>● animated event-stand.
+                                              </span>
+                                          </span>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div><div style="height:3vw"></div>
+                          <div id="7. Interior and exterior">
+                              <span class="home-text">
+                                  <span style="font-family: NailFont;" id="one"> Interior and exterior</span>
+                              </span>
+                              <div id="wrapper" class="comtainer-scroll-img dragscroll">
+                                  <div class="scroll-img">
+                                      <div style="font-family: NailFont;" id="divNotClicable" class="first-in-row"></div>
+                                          <div class="home-frame71">
+                                  <a data-fancybox="gallery60" data-src="img_svg/imgs/allImg/7. Interior and exterior/01.jpg" data-caption="1">
+                                      <img src="img_svg/imgs/pre/7. Interior and exterior pre/01 pre.jpg" class="img-rectangle3"/>
+                                  </a>
+                                  <a data-fancybox="gallery60" data-src="img_svg/imgs/allImg/7. Interior and exterior/02.jpg" data-caption="2">
+                                      <img src="img_svg/imgs/pre/7. Interior and exterior pre/02 pre.jpg" class="img-rectangle3"/>
+                                  </a>
+                              </div><a data-fancybox="gallery60" data-src="img_svg/imgs/allImg/7. Interior and exterior/03.jpg" data-caption="3">
+                                  <img src="img_svg/imgs/pre/7. Interior and exterior pre/03 pre.jpg" class="img-rectangle2"/>
+                              </a><a data-fancybox="gallery60" data-src="img_svg/imgs/allImg/7. Interior and exterior/04.jpg" data-caption="4">
+                                  <img src="img_svg/imgs/pre/7. Interior and exterior pre/04 pre.png" class="img-rectangle1"/>
+                              </a><a data-fancybox="gallery60" data-src="img_svg/imgs/allImg/7. Interior and exterior/05.png" data-caption="5">
+                                  <img src="img_svg/imgs/pre/7. Interior and exterior pre/05 pre.jpg" class="img-rectangle4"/>
+                              </a><div class="home-frame71">
+                                  <a data-fancybox="gallery60" data-src="img_svg/imgs/allImg/7. Interior and exterior/06.png" data-caption="6">
+                                      <img src="img_svg/imgs/pre/7. Interior and exterior pre/06pre.jpg" class="img-rectangle3"/>
+                                  </a>
+                                  <a data-fancybox="gallery60" data-src="img_svg/imgs/allImg/7. Interior and exterior/07.png" data-caption="7">
+                                      <img src="img_svg/imgs/pre/7. Interior and exterior pre/07 pre.jpg" class="img-rectangle3"/>
+                                  </a>
+                              </div><a data-fancybox="gallery60" data-src="img_svg/imgs/allImg/7. Interior and exterior/08.png" data-caption="8">
+                                  <img src="img_svg/imgs/pre/7. Interior and exterior pre/08 pre.jpg" class="img-rectangle2"/>
+                              </a><a data-fancybox="gallery60" data-src="img_svg/imgs/allImg/7. Interior and exterior/09.png" data-caption="9">
+                                  <img src="img_svg/imgs/pre/7. Interior and exterior pre/09 pre.png" class="img-rectangle1"/>
+                              </a><div id="divNotClicable" class="last-in-row"></div>
+                                      </div>
+                                  </div>
+                                  <div class="comtainer-scroll-img dragscroll">
+                                      <div class="scroll-img">
+                                          <div id="divNotClicable" class="first-in-row"></div><a data-fancybox="gallery61" data-src="img_svg/imgs/allImg/7. Interior and exterior/10.jpg" data-caption="10">
+                                  <img src="img_svg/imgs/pre/7. Interior and exterior pre/10 pre.png" class="img-rectangle1"/>
+                              </a><a data-fancybox="gallery61" data-src="img_svg/imgs/allImg/7. Interior and exterior/11.jpg" data-caption="11">
+                                  <img src="img_svg/imgs/pre/7. Interior and exterior pre/11pre.jpg" class="img-rectangle2"/>
+                              </a><div class="home-frame71">
+                                  <a data-fancybox="gallery61" data-src="img_svg/imgs/allImg/7. Interior and exterior/12.jpg" data-caption="12">
+                                      <img src="img_svg/imgs/pre/7. Interior and exterior pre/12 pre.jpg" class="img-rectangle3"/>
+                                  </a>
+                                  <a data-fancybox="gallery61" data-src="img_svg/imgs/allImg/7. Interior and exterior/13.jpg" data-caption="13">
+                                      <img src="img_svg/imgs/pre/7. Interior and exterior pre/13pre.jpg" class="img-rectangle3"/>
+                                  </a>
+                              </div><a data-fancybox="gallery61" data-src="img_svg/imgs/allImg/7. Interior and exterior/14.jpg" data-caption="14">
+                                  <img src="img_svg/imgs/pre/7. Interior and exterior pre/14 pre.jpg" class="img-rectangle4"/>
+                              </a><a data-fancybox="gallery61" data-src="img_svg/imgs/allImg/7. Interior and exterior/15.jpg" data-caption="15">
+                                  <img src="img_svg/imgs/pre/7. Interior and exterior pre/15 pre.jpg" class="img-rectangle1"/>
+                              </a><a data-fancybox="gallery61" data-src="img_svg/imgs/allImg/7. Interior and exterior/16.jpg" data-caption="16">
+                                  <img src="img_svg/imgs/pre/7. Interior and exterior pre/16 pre.jpg" class="img-rectangle2"/>
+                              </a><div class="home-frame71">
+                                  <a data-fancybox="gallery61" data-src="img_svg/imgs/allImg/7. Interior and exterior/17.jpg" data-caption="17">
+                                      <img src="img_svg/imgs/pre/7. Interior and exterior pre/17 pre.jpg" class="img-rectangle3"/>
+                                  </a>
+                                  <a data-fancybox="gallery61" data-src="img_svg/imgs/allImg/7. Interior and exterior/18.jpg" data-caption="18">
+                                      <img src="img_svg/imgs/pre/7. Interior and exterior pre/18 pre.jpg" class="img-rectangle3"/>
+                                  </a>
+                              </div><div id="divNotClicable" class="last-in-row"></div>
+                                      </div>
+                                  </div>
+                                  <div class="comtainer-scroll-img dragscroll">
+                                      <div class="scroll-img">
+                                          <div id="divNotClicable" class="first-in-row"></div><a data-fancybox="gallery62" data-src="img_svg/imgs/allImg/7. Interior and exterior/19.jpg" data-caption="19">
+                                  <img src="img_svg/imgs/pre/7. Interior and exterior pre/19 pre.jpg" class="img-rectangle2"/>
+                              </a><a data-fancybox="gallery62" data-src="img_svg/imgs/allImg/7. Interior and exterior/20.jpg" data-caption="20">
+                                  <img src="img_svg/imgs/pre/7. Interior and exterior pre/20 pre.jpg" class="img-rectangle4"/>
+                              </a><a data-fancybox="gallery62" data-src="img_svg/imgs/allImg/7. Interior and exterior/21.jpg" data-caption="21">
+                                  <img src="img_svg/imgs/pre/7. Interior and exterior pre/21 pre.jpg" class="img-rectangle1"/>
+                              </a><div class="home-frame71">
+                                  <a data-fancybox="gallery62" data-src="img_svg/imgs/allImg/7. Interior and exterior/22.png" data-caption="22">
+                                      <img src="img_svg/imgs/pre/7. Interior and exterior pre/22 pre.jpg" class="img-rectangle3"/>
+                                  </a>
+                                  <a data-fancybox="gallery62" data-src="img_svg/imgs/allImg/7. Interior and exterior/23.jpg" data-caption="23">
+                                      <img src="img_svg/imgs/pre/7. Interior and exterior pre/23 pre.jpg" class="img-rectangle3"/>
+                                  </a>
+                              </div><a data-fancybox="gallery62" data-src="img_svg/imgs/allImg/7. Interior and exterior/24.png" data-caption="24">
+                                  <img src="img_svg/imgs/pre/7. Interior and exterior pre/24 pre.jpg" class="img-rectangle2"/>
+                              </a><a data-fancybox="gallery62" data-src="img_svg/imgs/allImg/7. Interior and exterior/25.jpg" data-caption="25">
+                                  <img src="img_svg/imgs/pre/7. Interior and exterior pre/25 pre.jpg" class="img-rectangle4"/>
+                              </a><div id="divNotClicable" class="last-in-row"></div>
+                                      </div>
+                                  </div>
+                                  <div class="comtainer-scroll-img dragscroll">
+                                      <div class="scroll-img">
+                                          <div id="divNotClicable" class="first-in-row"></div><div class="home-frame71">
+                                  <a data-fancybox="gallery64" data-src="img_svg/imgs/allImg/7. Interior and exterior/26.png" data-caption="26">
+                                      <img src="img_svg/imgs/pre/7. Interior and exterior pre/26 pre.jpg" class="img-rectangle3"/>
+                                  </a>
+                                  <a data-fancybox="gallery64" data-src="img_svg/imgs/allImg/7. Interior and exterior/27.png" data-caption="27">
+                                      <img src="img_svg/imgs/pre/7. Interior and exterior pre/27 pre.jpg" class="img-rectangle3"/>
+                                  </a>
+                              </div><a data-fancybox="gallery64" data-src="img_svg/imgs/allImg/7. Interior and exterior/28.png" data-caption="28">
+                                  <img src="img_svg/imgs/pre/7. Interior and exterior pre/28 pre.jpg" class="img-rectangle2_1"/>
+                              </a>
+                                      <div class="text_rectangle">
+                                          <span class="home-text18">
+                                              <span class="langRu" style="font-family: 'Montserrat';">
+                                                  Элементы интерьера и экстерьера для студии Романа Власова.
+                                              </span>
+                                              <span class="langEn" >
+                                                  Interior and exterior elements for Roman Vlasov’s studio.
+                                              </span>
+                                          </span>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div><div style="height:3vw"></div>
+                          <div id="two" style="height:100vh" id="AboutMe">
+                              <span class="home-text">
+                                  <span style="font-family: NailFont;" id="one">About Me</span>
+                              </span>
+                              <div class="home-text-aboutMe langRu" style="font-family: 'Montserrat'; font-size: 2.25vw">
+                                  Опыт работы в дизайне 7 лет. Также занимаюсь 3D моделированием. Моими основными инструментами являются:Photoshop, Illustrator, Indesign, Figma, Blender, Cinema 4d, ZBrush, Marvelous, Substance. Умею адаптировать современные нейросетевые команды под софт графического дизайнера. <br>Имею опыт работы с крупными брендами и успешными компаниями в разных отраслях такие как: МТС, Авито, ZNY, Anteater, PLStorage, Liars Collective, Empire of Summer, Zakat Family, VSRap Shop, Four-thirtythree. Умею работать как в команде, так и независимо, быстро адаптироваться к новым требованиям и срокам. <br>Имею развитые коммуникативные навыки, умение убеждать и донести свои идеи до клиента, команды или руководства. <br>Хорошо осведомлен в последних тенденциях дизайна и искусства, а также в технических новинках, нейросетях связанных с дизайном и визуалом.
+                              </div>
+                              <div class="home-text-aboutMe langEn">
+                                  Work experience in design for 8 years. I am also engaged in 3D modeling. My main tools include Photoshop, Illustrator, Indesign, Figma, Blender, Cinema 4d, ZBrush, Marvelous, Substance. I can adapt modern neural network commands to graphic design software. <br>I have experience working with major brands and successful companies in various industries such as MTS, Avito, ZNY, Anteater, PLStorage, Liars Collective, Empire of Summer, Zakat Family, VSRap Shop, Four-thirtythree. <br>I can work both in a team and independently, quickly adapt to new requirements and deadlines. I have developed communication skills, the ability to persuade and convey my ideas to clients, teams, or management. <br>I am well-informed about the latest trends in design and art, as well as technological innovations, neural networks related to design and visuals.
+                              </div>
+                          </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--<script src="JS/svap.js"></script>-->
+    <script src="JS/swaplang.js"></script>
+    <script src="JS/buttonToUp.js"></script>
+  </body>
+</html>

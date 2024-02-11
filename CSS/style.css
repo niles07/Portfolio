@@ -1,0 +1,486 @@
+﻿@font-face {
+    font-family: 'NailFont';
+    src: url('2_5400239170704654691.ttf');
+}
+@font-face {
+    font-family: 'Montserrat';
+    src: url('Montserrat-VariableFont_wght.ttf');
+}
+
+html {  
+    font-family: NailFont; /*Стиль текста*/
+    scroll-behavior: smooth /*Значение изменяет скорость обращения к блоку по указателю*/
+}
+
+* { /* Знак * это универсальный селектор => применение ко всем элементам страницы, все вместе с margin и padding это сброс CSS (разные браузеры некоторые прля используют по умолчанию и может появится не запланированный отступ)*/
+    border: 0;
+    margin: 0; /*Отступ элемента от элемента снаружи*/
+    padding: 0; /*Отступ внутри, от края элемента до самого содержимого*/
+    box-sizing: border-box; /*определяет как вычисляется общая ширина и высота элемента, border-box говорит браузеру учитывать любые границы и внутренние отступы в значениях, которые вы указываете в ширине и высоте элемента*/
+    border-style: none; /*Стиль рамки. Например solid добавляет тонкую линию как край блока элемента*/
+    border-width: 0;  /*Ширина рамки элемента (прикол она может тоэе быть не 0)*/
+    user-select: none; /*Определяет может ли пользователь что либо выбрать и удержав перетянуть*/
+}
+
+.visibility {
+    display: none;
+}
+
+body {  /**/ /*/**/ 
+    width: 98vw;
+    overflow-x:hidden;
+    height: 105vh;
+    width:100vw;
+    scroll-behavior: smooth;
+    /* жирность текста, усиливает начертание текста (пробуй 900)*/
+    /*font-style: normal; /*По сути типа курсива или просто наклон: normal, italic, or oblique (можно регклировать наклон в градусах, например: font-style: oblique 40deg; (хотя у меня почему-то не работает))*/
+    /*text-decoration: none; /*Это свойство подчеркивания c настройкой этой линии: волнистая, точками, можно вообще сверху и снизу слова*/
+    /*text-transform: none; /*Свойство которым можно менять регистр по типу: каждое слово с большой буквы или все буквы в верхнем регистре и т.д.*/
+    line-height: 1.15; /*Значение изменяет дистанцию между стрроками текста*/
+    /*letter-spacing: normal; /*Свойство ответственное за отступы между буквами*/ 
+}
+/*Ниже два CSS правила что бы не выделялось ничего*/
+::selection { /* изменение свойств выделения текста (можно менять цвет и т.д.) (например можно для отдельного вида элемента: a::selection)*/
+    background: transparent; /*Выделяемый текст выделяется бесцветно*/
+}
+::-moz-selection {
+    background: transparent;
+}
+/*
+body::-webkit-scrollbar {
+    width: 0vw; /* Ширина всего элемента навигации 
+    Доступ к свойствам скроллбара, убрал потому что он приводит к появлению горизонтального скроллабара
+}*/
+span {
+    pointer-events: none; /*определение распростронение возможности активировать событие*/
+    cursor: default; /*Регулирование изменение курсора при наведении*/
+} 
+a {
+    pointer-events: auto; /*В <a> обернуты картинки и ссылки вверху страницы*/ 
+    border: 0;
+    margin: 0; /*Отступ элемента от элемента снаружи*/
+    padding: 0; /*Отступ внутри, от края элемента до самого содержимого*/
+}
+img {  
+    object-fit: cover;
+    pointer-events: none;
+    display: block; /*В данном случае важен так как есть наложенные картинки и они имеют зазор если убрать это свойство. Способ отображения: none - ничего не отображается; block - идут вертикально обьекты; inline - обьекты в ряд но может переноситься и задавать ширину и высоту нельзя (они определяются по содержимому; inline-block - в ряд и еще можно задавать высоту и ширину); */
+    /*vertical-align: middle; /*не работает с block, а так выравнивает их по горизонтальной середине каждого*/
+}
+.videoClass {
+    object-fit: cover;
+    border: 0;
+    margin: 0; /*Отступ элемента от элемента снаружи*/
+    padding: 0; /*Отступ внутри, от края элемента до самого содержимого*/
+}
+.videoClassDown {
+    object-fit: cover;
+    border: 0;
+    margin: 0; /*Отступ элемента от элемента снаружи*/
+    padding: 0; /*Отступ внутри, от края элемента до самого содержимого*/
+}
+
+
+.home-frame71 {
+
+    flex-direction:column;
+    box-sizing: content-box;
+    width: 21.9vw;
+}
+
+
+/*Проблема с постоянной экспозицией меню контроля проигрывания видео*/
+video::-webkit-media-controls {
+    opacity: 0;
+    transition-duration: 5s
+}
+video::-webkit-media-controls:hover {
+    opacity: 1;
+    transition-duration: 0s
+}
+button {
+    background: #6CD4B5;
+    color: #000;
+    pointer-events: auto;
+    font-weight: 250;
+    text-align: center;
+    padding: 0.5vw 0.4vw;
+    border-radius: 4vw;
+    background-color: transparent;
+}
+.colorPressButton {
+    color: #6CD4B5;
+    background-color: transparent;
+    pointer-events: none;
+    font-weight: 250;
+    text-align: center;
+    padding: 0.5vw 0.4vw;
+    border-radius: 3vw;
+    z-index: 10000;
+  
+}
+
+/*Далее классы для основных жлементов страницы*/
+.rectangle {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background: #6CD4B5;
+}
+.lable {
+    left: 3.9%;
+    top: 5%;
+    position: relative;
+    display: flex;
+    width: 95%;
+    gap: 6.25%;
+}
+.lable-main {
+    width: 9.375%;
+    height: 9.375%;
+    display: flex;
+    position: relative;
+    align-items: flex-start;
+}
+.lable-text {
+    width: 44.6%;
+    height: 9.375%;
+    display: flex;
+    position: relative;
+    align-items: flex-start;
+}
+.textNavigationUp {
+    left: 7%;
+    width: 30%;
+    color: #000;
+    display: flex;
+    flex-direction: row;
+    gap: 28%;
+    position: relative;
+}
+.textNavigationIn {
+    display: flex;
+    font-weight: 250;
+    font-size: 2vw;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10%;
+    position: relative;
+}
+.textNavigationIn a {
+    text-decoration: none;
+    color: #000;
+}
+.textNavigationIn a:active {
+    color: none;
+}
+.home-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5vw;
+    float: left;
+}
+.home-frame {
+    left: 0%;
+    width: 100vw;
+    height: 399.1vw;
+    display: flex;
+    position: relative;
+    align-items: flex-start;
+    flex-shrink: 0;
+    background-color: rgba(255, 255, 255, 1);
+}
+.home-frame .scroll-img {
+    cursor: grab;
+}
+.home-frame .scroll-img:active {
+    cursor: grabbing;
+}
+.home-text {
+    color: rgba(0, 0, 0, 1);
+    left: 4vw;
+    position: relative;
+    width: 40%;
+    height: 0.9%;
+    font-size: 7vw;
+    font-style: Bold;
+    text-align: left;
+    font-weight: 700;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+}
+.home-text-aboutMe {
+    left: 4vw;
+    width: 90vw;
+    position: relative;
+    height: 0.9%;
+    text-align: left;
+}
+ 
+.comtainer-scroll-img {
+    overflow: scroll auto;  
+    width: 101.6vw; 
+    max-width: 300vw;
+    height: 37.5vw;  
+    flex-direction: row;
+}
+.comtainer-scroll-img::-webkit-scrollbar {
+    height: 0;
+}
+.first-in-row {
+    position:relative;
+    padding-left: 4vw;
+}
+.last-in-row {
+    position:relative;
+    padding-right: 4vw;
+}
+.scroll-img {
+    scroll-snap-type: x; 
+    height: 37.5vw; 
+    display: flex; 
+    user-select: none;
+    box-sizing: content-box;
+}
+.allProjects {
+    position: relative;
+    top: 10vw;
+}
+.border-img {
+    height: 37.5vw; 
+    width: 4vw; 
+    pointer-events: none; 
+    user-select: none; 
+    cursor: default;
+}
+.text_over_image {
+    position: absolute;
+    left: 8vw;
+    display: flex;
+    height: 4vw;
+    gap: 3.8vw;
+    color: #000;
+    align-items: center;
+}
+.text_over_image {
+    cursor:grab
+}
+.text_over_image:active {
+    cursor:grabbing
+}
+.text_over_image1 {
+    width: 12.5vw;
+    font-size: 1.8vw;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+}
+.text_over_image2 {
+    width: 31.3vw;
+    font-size: 1.25vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.text_rectangle {
+    position: absolute;
+    left: 8vw;
+    display: flex;
+    height: 4vw;
+    font-style: Bold;
+    text-align: left;
+    color: #000;
+    flex-direction: column;
+    width: 31.9vw;
+    padding: 3.9vw 0vw 3.9vw 3.9vw;
+    gap: 3.9vw;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+    left: 64.2vw;
+}
+.text_rectangle1 {
+    position: relative;
+    left: 8vw;
+    display: flex;
+    font-style: Bold;
+    text-align: left;
+    color: #000;
+    flex-direction: column;
+    width: 100vw;
+    height: auto;
+    padding: 3.9vw 3.9vw 0vw 3.9vw;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+    left: 0vw;
+}
+.home-text16 {
+    width: 12.3vw;
+    height: auto;
+    font-weight: 700;
+    font-size: 1.5vw;
+}
+.home-text18 {
+    width: 27.3vw;
+    height: auto;
+    font-weight: 400;
+    font-size: 1.5vw;
+}
+.home-text19 {
+    left: 4.4vw;
+    position: absolute;
+    width: 91.6vw;
+    height: auto;
+    font-weight: 400;
+    font-size: 1.5vw;
+}
+.home-text-1 {
+    width: 90vw;
+    height: auto;
+    font-weight: 400;
+    font-size: 1.5vw;
+}
+
+
+
+
+/*
+.shadow--top {
+    margin:0;
+    padding:0;
+    position: absolute;
+    z-index: 100;
+    width: 10vw;
+    height: 37.5vw;
+    background: red;
+    left: 0vw;
+    background: -webkit-linear-gradient(270deg, rgba(0, 0, 0, 0.35), transparent);
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.35), transparent);
+    opacity: 1;
+}
+.shadow--bottom {
+    margin:0;
+    padding:0;
+    position: absolute;
+    z-index: 100;
+    width: 10vw;
+    height: 37.5vw;
+    background: red;
+    right: 0vw;
+    background: -webkit-linear-gradient(90deg, rgba(0, 0, 0, 0.35), transparent);
+    background: linear-gradient(270deg, rgba(0, 0, 0, 0.35), transparent);
+}
+*/
+
+
+
+/*Далее идут классы для картинок*/
+.img-rectangle1 {
+    width: 21vw;
+    height: 37.5vw;
+}
+.img-rectangle2 {
+    width: 37.5vw;
+    height: 37.5vw;
+}
+.img-rectangle3 {
+    width: 22vw;
+    height: 18.75vw;
+}
+.img-rectangle4 {
+    width: 22vw;
+    height: 37.5vw;
+}
+.img-rectangle2_1 {
+    width: 37.6vw;
+    height: 37.5vw;
+}
+.img-rectangle5 {
+    height: 37.5vw;
+    width: 14.1vw;
+}
+.img-rectangle6 {
+    height: 37.5vw;
+    width: 21.4vw;
+}
+.img-rectangle7 {
+    height: 37.5vw;
+    width: 25vw;
+}
+.img-rectangle8 {
+    height: 18.75vw;
+    width: 14.1vw;
+}
+.img-rectangle9 {
+    height: 37.5vw;
+    width: 18vw;
+}
+.img-rectangle10 {
+    height: 37.5vw;
+    width: 39.1vw;
+}
+/*Конец классов для картинок*/
+
+
+
+
+/*Далее идет правила для логотипа*/
+.lable-letter1 {
+    width: 15%;
+    bottom: 0%;
+    position: absolute;
+}
+.lable-letter2 {
+    width: 5%;
+    left: 15.8%;
+    bottom: 0%;
+    position: absolute;
+}
+.lable-letter3 {
+    width: 5%;
+    left: 21.6%;
+    bottom: 0%;
+    position: absolute;
+}
+.lable-letter4 {
+    width: 15%;
+    left: 27.4%;
+    bottom: 0%;
+    position: absolute;
+}
+.lable-letter5 {
+    width: 14%;
+    left: 43%;
+    bottom: 0%;
+    position: absolute;
+}
+.lable-letter6 {
+    width: 5%;
+    left: 58%;
+    bottom: 0%;
+    position: absolute;
+}
+.lable-letter7 {
+    width: 12%;
+    left: 64.5%;
+    bottom: 0%;
+    position: relative;
+}
+.lable-letter8 {
+    width: 15%;
+    left: 78%;
+    bottom: 0%;
+    position: absolute;
+}
+.lable-letter9 {
+    width: 15%;
+    left: 94.5%;
+    bottom: 0%;
+    position: absolute;
+}
+/*Конец области с правилами для логотипа*/
