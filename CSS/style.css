@@ -1,4 +1,4 @@
-﻿@font-face {
+@font-face {
     font-family: 'NailFont';
     src: url('2_5400239170704654691.ttf');
 }
@@ -63,7 +63,7 @@ a {
 }
 img {  
     object-fit: cover;
-    pointer-events: none;
+    /*pointer-events: none;*/
     display: block; /*В данном случае важен так как есть наложенные картинки и они имеют зазор если убрать это свойство. Способ отображения: none - ничего не отображается; block - идут вертикально обьекты; inline - обьекты в ряд но может переноситься и задавать ширину и высоту нельзя (они определяются по содержимому; inline-block - в ряд и еще можно задавать высоту и ширину); */
     /*vertical-align: middle; /*не работает с block, а так выравнивает их по горизонтальной середине каждого*/
 }
@@ -227,7 +227,17 @@ button {
     height: 37.5vw;  
     flex-direction: row;
 }
+.comtainer-scroll-img-1 {
+    overflow: scroll auto;  
+    width: 101.6vw; 
+    max-width: 300vw;
+    height: 18.5vw;  
+    flex-direction: row;
+}
 .comtainer-scroll-img::-webkit-scrollbar {
+    height: 0;
+}
+.comtainer-scroll-img-1::-webkit-scrollbar {
     height: 0;
 }
 .first-in-row {
@@ -240,7 +250,7 @@ button {
 }
 .scroll-img {
     scroll-snap-type: x; 
-    height: 37.5vw; 
+    height: 18.5vw; 
     display: flex; 
     user-select: none;
     box-sizing: content-box;
@@ -423,6 +433,10 @@ button {
 .img-rectangle10 {
     height: 37.5vw;
     width: 39.1vw;
+}
+.img-rectangle00 {
+    height: 18.5vw;
+    width: 24.5vw;
 }
 /*Конец классов для картинок*/
 
